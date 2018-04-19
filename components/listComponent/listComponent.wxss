@@ -1,0 +1,28 @@
+/* components/listComponent/listComponent.wxss */
+.listItem {
+  height: 160rpx;
+  width: 100%;
+  border: 2rpx solid #45444a;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  color: #8d8f95;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.itemTitle {
+  color: #FFF;
+  font-size: 32rpx;
+}
+.itemInfo {
+  margin-top: 10rpx;
+  width: 100%;
+}
+.isLike{
+  height: 21rpx;
+  width: 24rpx;
+  margin-right: 10rpx;
+}

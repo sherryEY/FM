@@ -1,0 +1,69 @@
+<!--components/playerComponent/playerComponent.wxml-->
+<view class='content-container' style="{{bgColor}}">
+  <view class="audioType" animation="{{aniHide}}">{{audioType}}</view>
+  <view class="audioInfo" style="position:relative;" bindtap='hideAudio' animation="{{aniHide}}">
+    <image src="../../src/img/circle-bg.png" class="audioInfoBg {{playState?'rotate':''}}" style="position:absolute;left:0;top:0;animation-duration: 6s;"></image> 
+    <image src="../../src/img/circle-bg.png" class="audioInfoBg {{playState?'rotate':''}}" style="position:absolute;left:0;top:0;animation-duration: 8s;"></image> 
+    <image src="../../src/img/circle-bg.png" class="audioInfoBg {{playState?'rotate':''}}" style="position:absolute;left:0;top:0;animation-duration: 10s;"></image> 
+    <view style="width:100%;display:flex;flex-direction:column;align-items:center;z-index:2;">
+      <view class="audioTitle">{{audioTitle}}</view>
+    </view>
+    <view style="float:right;padding-bottom:50rpx;position:relative;font-size:26rpx;z-index:2;">
+      <view class="audioAuthor" hidden="{{audioAuthor==audioReader}}">作者： {{audioAuthor}}</view>
+      <view class="audioReader" hidden="{{audioAuthor==audioReader}}">朗读： {{audioReader}}</view>
+      <view class="authorAndReader" hidden="{{audioAuthor!=audioReader}}">作者/朗读： {{audioReader}}</view>
+      <image src="../../src/img/border.png" style="height:5rpx;width:60rpx;position:absolute;left:0;bottom:0;"></image>
+    </view>
+  </view>
+  <view class="progressGroup" animation="{{aniLeave}}">
+    <view class="btnFind" bindtap='goToFind' hidden='{{isNew == 1}}'>
+      <image class="findImg" src="../../src/img/btn-goto-find.gif"></image>
+    </view>
+    <image style="width:42rpx;height:28rpx;" src="{{image.order[playOrder]}}" bindtap="changePlayOrder"></image>
+    <progress class="playProgress" stroke-width='1' backgroundColor='rgba(255,255,255,0.4)' activeColor='rgba(255,255,255,1)' active='true' percent='{{progressValue}}' active-mode='forwards'></progress>  
+     <!--<slider min="0" max="{{maxTime}}" class="playProgress" block-size="12" bindchange="sliderMove" backgroundColor='rgba(255,255,255,0.3)' activeColor="#FFF" value="{{progressTime}}"></slider>-->
+    <view style="font-size:20rpx;">{{time}}</view>
+  </view>
+  <view class="btnGroup" animation="{{aniLeave}}">
+    <view class="btnList" bindtap="goToList" style="height:110rpx;width:110rpx;text-align:center;position:relative;">
+      <image class="listImg" src="{{image.listImg}}"></image>
+    </view>
+    <view class="btnPrev" bindtap="playPrev" style="height:110rpx;width:110rpx;text-align:center;position:relative;">
+      <image class="prevImg" src="{{image.prevImg}}"></image>
+    </view>
+    <view class="btnPlay" bindtap="playClick">
+      <image class="playImg" src="{{playState?image.playingImg:image.playImg}}"></image>
+    </view>
+    <view class="btnNext" bindtap="playNext" style="height:110rpx;width:110rpx;text-align:center;position:relative;">
+      <image class="nextImg" src="{{image.nextImg}}"></image>
+    </view>
+    <view class="btnLike" bindtap='isLike' style="height:110rpx;width:110rpx;text-align:center;position:relative;">
+      <image class="likeImg" src="{{isLike?image.likeImgA:image.likeImgB}}"></image>
+    </view>
+  </view>
+  <scroll-view class="lyricInfo" scroll-y='true' scroll-x='false' animation="{{aniShow}}" bindtap='hideAudio' style="text-align:{{alignValue}};display:{{!showLyric?'none':'block'}};">
+    <view style="width:100%;padding:0 75rpx;box-sizing:border-box;">
+      <view class="lyricTitle">{{audioTitle}}</view>
+      <view style="width:100%;font-size:24rpx;padding-top:50rpx;padding-bottom:40rpx;position:relative;">
+        <text class="audioAuthor" hidden="{{audioAuthor==audioReader}}">作者： {{audioAuthor}}<text space="true" decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>朗读： {{audioReader}}</text>
+        <text class="authorAndReader" hidden="{{audioAuthor!=audioReader}}">作者/朗读： {{audioReader}}</text>
+        <image src="../../src/img/border.png" style="height:6rpx;width:60rpx;position:absolute;left:0;bottom:0;"></image>
+      </view>
+      <view class="lyric">
+        <rich-text nodes="{{nodes}}"></rich-text>
+      </view> 
+      <view>
+        <image src="../../src/img/border.png" style="height:6rpx;width:60rpx;margin-top:50rpx;"></image>
+        <view style="font-size:24rpx;padding-top:20rpx;line-height:50rpx;opacity:0.6;">
+          本内容由新京报书评周刊 & 有时 出品
+        </view>
+        <view style="font-size:20rpx;line-height:40rpx;opacity:0.6;">
+          想第一时间听到更多诗、书和在线读书会，请搜索并关注我们的公众号“有时TimeTo”。
+        </view>
+      </view>
+    </view>
+  </scroll-view> 
+</view>
+
+
+

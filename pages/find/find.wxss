@@ -1,0 +1,89 @@
+/* pages/find/find.wxss */
+.container {
+   background: #2a2d38;
+   overflow: hidden; 
+}
+.selectOneToListen {
+  line-height: 180rpx;
+  color: #7e818c;
+  height: 180rpx;
+}
+.selectionList {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  position: relative;
+}
+
+@keyframes myfirst
+{
+  0% {
+    /* -webkit-transform: translate(0); */
+    transform: translate3d(0,0,0);
+  }
+  10% {
+    transform: translate3d(-5px,-5px,0);
+  }
+  20% {
+    transform: translate3d(-5px,0,0);
+  }
+  30% {
+    transform: translate3d(0,0,0);
+  }
+  40% {
+    transform: translate3d(0,-5px,0);
+  }
+  50%{
+    transform: translate3d(5px,5px,0);
+  }
+  60%{
+    transform: translate3d(5px,0,0);
+  }
+  70% {
+    transform: translate3d(0,0,0);
+  }
+  80%{
+    transform: translate3d(0,5px,0);
+  }
+  90% {
+    transform: translate3d(5px,5px,0);
+  }
+  100% {
+     transform: translate3d(0,0,0);
+  }
+}
+.circle{
+  position: absolute;
+  height:150rpx;
+  width:240rpx;
+  padding-top:90rpx;
+  border-radius:240rpx;
+  animation-name: myfirst;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both; 
+  background:rgba(255,255,255,0.05);
+}
+.imgPlaying{
+  height:100rpx;
+  width:100rpx;
+  border-radius: 100rpx;
+  position:fixed;
+  right:50rpx;
+  bottom:50rpx;
+  background: #c5c4c5;
+  box-shadow: 0rpx 0rpx 25rpx 7rpx #2a2d38;
+  overflow: hidden;
+}
+.changeOne{
+  height: 84rpx;
+  width: 86rpx;
+  position:fixed;
+  bottom: 50rpx;
+  left: 50%;
+  margin-left: -43rpx;
+  line-height: 100rpx;
+  color:#FFF;
+  text-decoration: underline;
+}

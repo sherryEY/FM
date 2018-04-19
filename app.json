@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/find/find",    
+    "pages/list/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2a2d38",
+    "navigationBarTitleText": "有时FM",
+    "navigationBarTextStyle": "#ffffff",
+    "onPullDownRefresh": true
+  }
+}

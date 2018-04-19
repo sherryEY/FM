@@ -1,0 +1,201 @@
+/* components/playerComponent/playerComponent.wxss */
+.content-container {
+  height: 100%;
+  width: 100%;
+  color: #FFF;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.audioType {
+  height: 150rpx;
+  line-height: 150rpx;
+  font-size: 40rpx;
+  opacity: 0.6; 
+}
+.audioInfo {
+  height: 450rpx;
+  padding: 100rpx;
+  width: 450rpx;
+  border-radius: 50%;
+  font-size: 30rpx;
+}
+.audioInfoBg {
+  height: 650rpx;
+  width: 650rpx;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0.6;
+}
+.rotate {
+   animation-name: rotate; 
+}
+.lyricInfo {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  box-sizing: border-box;
+  text-align:left!important;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.lyricTitle{
+  padding-top: 50rpx;
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+}
+.lyric{
+  line-height: 48rpx;
+  opacity: 1;
+  font-size: 26rpx;
+}
+.audioTitle {
+  font-size: 40rpx;
+  margin-top: 130rpx;
+  margin-bottom: 70rpx;
+}
+.audioAuthor{
+  opacity: 0.6;
+}
+.audioReader{
+  opacity: 0.6;
+}
+.authorAndReader{
+  opacity: 0.6;
+}
+.lyricP{
+  margin-top:50rpx;
+}
+.progressGroup {
+  width: 100%;
+  position: fixed;
+  bottom: 180rpx;
+  left: 0;
+  box-sizing: border-box;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #FFF;
+  height: 80rpx;
+}
+.playProgress {
+  width: 80%;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.btnGroup {
+  position: fixed;
+  left: 0;
+  bottom: 70rpx;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+.listImg{
+  width: 31rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15.5rpx;
+  margin-top: -15rpx;
+}
+.prevImg{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rpx;
+  margin-top: -15rpx;
+} 
+.btnPlay {
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.playImg{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -18rpx;
+  margin-top: -20rpx;
+}
+.nextImg{ 
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rpx;
+  margin-top: -15rpx;
+}
+.likeImg{
+  width: 34.5rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -17.25rpx;
+  margin-top: -15rpx;
+}
+.btnFind{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 45rpx;
+  top: -130rpx;
+  z-index: 10;
+}
+.findImg{
+  width: 100rpx;
+  height: 100rpx;
+  animation-name: scale;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both; 
+}
+
+@keyframes scale
+{
+  0% {
+    transform:scale(1,1);  
+  }
+  50% {
+    transform:scale(0.1,0.1);  
+  }
+  100% {
+    transform:scale(1,1);
+  }
+}
+@keyframes rotate
+{
+  0% {
+    transform:rotateZ(0deg);  
+  }
+  50% {
+    transform:rotateZ(180deg);   
+  }
+  100% {
+    transform:rotateZ(360deg); 
+  }
+}
+.circle{
+  animation-name: myfirst;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+

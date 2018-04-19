@@ -1,0 +1,52 @@
+/* pages/list/list.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nav {
+  width: 100%;
+  height: 100rpx;
+  background: #45454b;
+  opacity: 1;
+  z-index: 20;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.contentList{
+   height: 100%;
+   width: 100%;
+   background: rgba(63,64,71,0.96);
+}
+.navItem{
+  height: 92rpx;
+  width: 20%;
+  line-height: 100rpx;
+  border-bottom: 8rpx solid #45454b;
+  text-align: center;
+}
+.now{
+  border-bottom: 8rpx solid #717a95;
+}
+.imgPlaying{
+  height:100rpx;
+  width:100rpx;
+  border-radius: 100rpx;
+  position:fixed;
+  right:50rpx;
+  bottom:50rpx;
+  background: #c5c4c5;
+  box-shadow: 0rpx 0rpx 25rpx 7rpx #2a2d38;
+  overflow: hidden;
+}
+.isLike{
+  height: 27rpx;
+  width: 30.5rpx;
+}

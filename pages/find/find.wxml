@@ -1,0 +1,14 @@
+<!--pages/find/find.wxml-->
+<view class="container">
+  <view class="selectOneToListen">择 · 一 · 聆 · 听</view>
+  <view class="selectionList">
+    <view wx:for="{{positionList[randomNum]}}" wx:key="index" class="circle" bindtap="gotoPlay" data-type="{{list[index].channel_id}}" data-id="{{list[index].id}}" animation="{{aniShow}}" style="{{item}}{{bg_color[index]?bg_color[index]:''}}">
+      <view class="title" style="font-size: 30rpx;">{{list[index].tag_name}}</view>
+      <view class="channel" style="font-size: 20rpx;">{{list[index].audio_time}}</view>
+    </view>  
+  </view>
+  <image class="changeOne" bindtap="changeOne" src="../../src/img/img-change.png"></image>
+  <view wx:if="{{playing}}" class="imgPlaying" bindtap="gotoBack">
+    <image style="height:100rpx;width:100rpx;" src="../../src/img/img-playing.gif"></image>
+  </view> 
+</view>

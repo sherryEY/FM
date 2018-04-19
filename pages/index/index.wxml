@@ -1,0 +1,11 @@
+<view class="container" style="background-image:url({{bgImg}});">
+  <swiper circular="true" skip-hidden-item-layout="true" duration="1000" class="swiper-container" bindchange="stopPlay" current="{{currentType}}">
+    <swiper-item wx:for="{{channelList}}" wx:key="unique" >
+      <player-component data-id="{{audioList[index].id}}" data-type="{{index}}" audio-type="{{item.channel_name}}" audio-title="{{audioList[index].title}}" audio-author="{{audioList[index].author?audioList[index].author:'未知'}}" audio-reader="{{audioList[index].reader?audioList[index].reader:'未知'}}" bg-color="{{bg_color[index]}}" align-value="{{audioList[index].desc_align}}" play-state="{{play_state[index]}}" description="{{audioList[index].description?audioList[index].description:'暂无文本'}}" is-like="{{audioList[index].is_fav}}" progress-time="{{progressTime[index]}}" play-order="{{playOrder}}" is-new="{{isNew}}" bind:playAudio="onPlayAudio" bind:pauseAudio="onPauseAudio" bind:playPrev="onPlayPrev" bind:playNext="onPlayNext" bind:goToList="onGoToList" bind:isLikeClick="isLikeClick" bind:goToFind="onGoToFind" bind:sliderMove="sliderMove" bind:changePlayOrder="changePlayOrder" time="{{timeList[index]}}" progressValue="{{progressList[index]}}"></player-component>
+    </swiper-item> 
+  </swiper> 
+  <view class="tips" hidden="{{isNew == 0}}">
+    <image class="bg" src="../../src/img/bg.png"></image>
+    <image bindtap="hideTips" class="btn-know" src="../../src/img/btn-know.png"></image>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--components/listComponent/listComponent.wxml-->
+<view class="listItem" style="{{('id'+item.id)==playingId?'background:rgba(113,122,149,0.3)':''}}">
+  <view class="item" style="width:100%;">
+    <view class="itemTitle">{{item.title}}</view>
+    <view class="itemInfo">
+      <image wx:if="{{isLike == '1'?true:false}}" class="isLike" src="../../src/img/heart.png"></image>
+      <text wx:if="{{item.author==item.reader?true:false}}">作者/朗读 {{item.author?item.author:"未知"}}</text>
+      <text wx:if="{{item.author==item.reader?false:true}}">作者 {{item.author?item.author:"未知"}}</text>
+      <text wx:if="{{item.author==item.reader?false:true}}"> 朗读 {{item.reader?item.reader:"未知"}}</text>
+      <text style="float:right;">{{item.create_time}}</text>
+    </view>
+  </view>
+  <view>
+    {{item.duration}}
+  </view>
+</view>

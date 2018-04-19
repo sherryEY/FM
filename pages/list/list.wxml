@@ -1,0 +1,20 @@
+<!--pages/list/list.wxml-->
+<view class="container" style="padding-top:100rpx;background-image:url({{bgImg}});">
+  <view class="nav">
+    <view class="navItem {{currentChannel=='channel_like'?'now':''}}" catchtap="tabClick" data-type="like">
+      <image class="isLike" bindtap="tabClick" data-type="like"  src="../../src/img/heart.png"></image>
+    </view>
+    <view wx:for="{{navList}}" wx:key="unique" class="navItem {{currentChannel=='channel_'+index?'now':''}}" bindtap="tabClick" data-type="{{index}}">{{item.channel_name}}</view>
+  </view> 
+  <view class="contentList">
+    <scroll-view scroll-y="true" style="width:100%;height:100%" scroll-into-view="{{currentAudio}}" scroll-with-animation="true" bindscrolltolower="loadMore" scroll-top="{{scrollTop}}">
+       <view id="{{'id'+item.id}}" data-id="{{item.id}}" data-type="{{item.channel_id}}" wx:for="{{list}}"  wx:key="unique" bindtap="gotoPlay">
+        <list-component item="{{item}}" playing-id="{{currentAudio}}" is-like="{{item.is_fav}}"></list-component>
+      </view> 
+    </scroll-view>
+  </view>
+  <view wx:if="{{playing}}" class="imgPlaying" bindtap="gotoBack">
+    <image style="height:100rpx;width:100rpx;" src="../../src/img/img-playing.gif"></image>
+  </view>
+</view>
+ 

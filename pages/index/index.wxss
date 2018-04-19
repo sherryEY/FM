@@ -1,0 +1,36 @@
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.bg{
+  height: 183.575vw; 
+  width: 100%; 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.tips {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* -webkit-clip-path: circle(95px at 128px 95px);
+  clip-path: circle(95px at 128px 95px); */
+}
+.tip1{
+  width: 466rpx;
+  height: 25rpx;
+}
+.btn-know {
+  height: 73.9rpx;
+  width: 240rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -110rpx;
+  bottom: 50rpx;
+}
